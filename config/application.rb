@@ -62,7 +62,13 @@ module Xlearn
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # not access the DB or load models when precompiling your assets.
+    config.assets.initialize_on_precompile = false
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Observer for welcome email
+    config.active_record.observers = :user_observer
   end
 end
