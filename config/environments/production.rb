@@ -65,4 +65,16 @@ Xlearn::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.default_url_options = { :host => 'secure-tor-4786.herokuapp.com' }
+
+  # Change mail deliver to either :smtp, :sendmail, :file, :test
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "cardinform.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "mwwang@gmail.com",
+    password: "Bangk0k1"
+  }
 end
