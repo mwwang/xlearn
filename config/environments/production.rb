@@ -74,7 +74,7 @@ Xlearn::Application.configure do
     domain: "cardinform.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "mwwang@gmail.com",
-    password: "Bangk0k1"
+    user_name: ENV['EMAIL'],
+    password: ENV['EMAIL-PW']
   }
 end
