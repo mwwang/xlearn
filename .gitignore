@@ -3,7 +3,7 @@
 
 # Ignore sensitive files
 /config/email.yml
-/config/app_envitonment_variables.rb
+/config/app_environment_variables.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
