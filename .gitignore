@@ -1,6 +1,9 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore sensitive files
+/config/email.yml
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 

@@ -1,11 +1,10 @@
 Xlearn::Application.routes.draw do
-  get "users/new"
-
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-
+  resources :users
   root to: 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
+  match 'users/:id' => 'users#show'
 
 
   # The priority is based upon order of creation:

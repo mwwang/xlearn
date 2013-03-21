@@ -14,5 +14,9 @@
 	</div>
 
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-
+<% if user_signed_in? %>
+	<%= link_to "Profile", current_user %>
+	<%= current_user.lastname %>
+	<%= current_user.firstname %>
+<% end %>
 </div>
