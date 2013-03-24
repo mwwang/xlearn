@@ -61,6 +61,7 @@ module Xlearn
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.debug = true
 
     # not access the DB or load models when precompiling your assets.
     config.assets.initialize_on_precompile = false
