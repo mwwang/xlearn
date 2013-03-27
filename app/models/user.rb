@@ -9,11 +9,17 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :avatar
   # attr_accessible :title, :body
 
+  has_many :posts, dependent: :destroy
+
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
 
   validates :firstname, presence: true
   validates :lastname, presence: true
 
+  def feed
+    Post.where("user_id = ?", id)
+  end
+  
     private
 
 end

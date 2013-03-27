@@ -15,6 +15,26 @@
 	  <% end %>
 	</div>
 
+	<% if user_signed_in? %>
+		<div class="row">
+			<aside class="span4">
+				<section>
+					<%= render 'shared/user_info' %>
+				</section>
+				<section>
+					<%= render 'shared/post_form' %>
+				</section>
+			</aside>
+			<div class="span8">
+				<h3>Post feed</h3>
+				<%= render 'shared/feed' %>
+			</div>
+		</div>
+	<% else %>
+		<h3>NOT LOGGED IN</h3>
+	<% end %>
+
+
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% if user_signed_in? %>
 	<%= link_to "Profile", current_user %>
