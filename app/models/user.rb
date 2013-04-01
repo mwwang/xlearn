@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
   validates :lastname, presence: true
 
   def feed
-    Post.where("user_id = ?", id)
+    # Post.where("user_id = ?", id)
+    Post.from_user_followed_by(self)
   end
 
   def following?(other_user)
