@@ -4,8 +4,16 @@ Xlearn::Application.routes.draw do
   get "posts/destroy"
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-  resources :users
-  resources :posts, only: [:create, :destroy]
+  
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  
+  resources :posts,         only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   root to: 'static_pages#home'
 
   match '/about', to: 'static_pages#about'

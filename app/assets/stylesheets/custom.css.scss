@@ -77,12 +77,52 @@ aside {
   }
 }
 
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars{
+  margin-top: 10px;
+}
+
 .avatar {
   float: left;
   margin-right: 10px;
   height: 50px;
   width: 50px;
 }
+
+.myavatar {
+  float: left;
+  margin-right: 10px;
+  height: 80px;
+  width: 80px;
+}
+
+.miniavatar {
+  float: left;
+  margin: 0 2px 2px 0px;
+  height: 30px;
+  width: 30px;
+}
+
 
 /* Posts */
 

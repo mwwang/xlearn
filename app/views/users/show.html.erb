@@ -6,25 +6,23 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= image_tag @user.avatar.url(:thumb), class: "avatar" %>
+        <%= image_tag @user.avatar.url(:thumb), class: "myavatar" %>
         <%= @user.firstname + " " + @user.lastname %>
       </h1>
     </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
   </aside>
-</div>
 
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-Hello <%= @user.firstname %> <%= @user.lastname %>
-<%= @user.email %>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %>
-
-<% if @user.posts.any?%>
-<h3>Posts <%= @user.posts.count %></h3>
-	<ol class="posts">
-		<%= render @posts %>
-	</ol>
-	<%= will_paginate @posts %>
-<% end %>
+  <div class="span8">
+    <%= render 'shared/follow_form' %>
+    <% if @user.posts.any?%>
+    <h3>Posts <%= @user.posts.count %></h3>
+    	<ol class="posts">
+    		<%= render @posts %>
+    	</ol>
+    	<%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>
