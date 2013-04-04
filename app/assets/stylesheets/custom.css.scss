@@ -52,6 +52,52 @@ p {
   line-height: 1.7em;
 }
 
+/* carousel */
+
+#myCarousel {
+  width: 100%;
+  position: absolute;
+  margin-top: -20px
+}
+
+// .carousel {
+//   position: absolute;
+//   max-width: 100%;
+//   margin-top: -20px;
+//   min-height: 600px;
+// }
+
+.carousel-inner .item {
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ad1 {
+  background: url("hero_BG_baby.jpg") no-repeat center center; 
+}
+
+.ad2 {
+  background: url("hero_BG_backpack.jpg") no-repeat center center; 
+}
+
+.ad3 {
+  background: url("hero_BG_incubator.jpg") no-repeat center center; 
+}
+
+.carousel-text {
+  height: 600px;
+  padding-top: 100px;
+  position: relative;
+  .well {
+    opacity: 0.8;
+  }
+}
+
 /* sidebar */
 
 aside {
