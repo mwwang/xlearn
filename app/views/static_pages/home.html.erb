@@ -13,19 +13,25 @@
 	  	<%# image_tag "hero_BG.jpg" %>
 	  	<!-- <img src="http://placehold.it/2000x720/990099/ffffff" alt="" /> -->
       <div class="carousel-caption">
-        <p>Health and pregnancy</p>
+      	<div class="container">
+        	<p>Health and pregnancy</p>
+      	</div>
       </div>
 	  </div>
 	  <div class="item ad2">
 	  <!-- 	<img src="http://placehold.it/2000x720/cc9966/ffffff" alt="" /> -->
       <div class="carousel-caption">
-        <p>Travel</p>
+      	<div class="container">
+        	<p>Travel and experiences</p>
+      </div>
       </div>
 	  </div>
 	  <div class="item ad3">
 	  	<!-- <img src="http://placehold.it/2000x720" alt="" /> -->
       <div class="carousel-caption">
-        <p>Tech and entrepreneurship</p>
+      	<div class="container">
+        	<p>Tech and entrepreneurship</p>
+      	</div>
       </div>
 	  </div>
 	</div>
@@ -37,10 +43,19 @@
 
 <div class="container">
 	<aside class="carousel-text">
-		<h2>Welcome to Bekweeth</h2>
-		<div class="well">
+		<h1>Welcome to Bekweeth</h1>
+		<h2>Start learning from <strong><%= @users.count %></strong> other people now.</h2>
+		<div class="well well-small">
 			<div class="hero-well">
-				Select what you want to know.
+				<select>
+					<option selected disabled>What do you want to learn?</option>
+					<option>Health and pregnancy</option>
+					<option>Travel and exploration</option>
+					<option>Tech and entrepreneurship</option>
+					<option>Arts and creative</option>
+				</select>
+				<input type="text" placeholder="Where do you live?">
+				<button class="btn btn-large btn-primary" type="button">Find</button>
 			</div>
 		</div>
 	</aside>

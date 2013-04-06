@@ -57,7 +57,7 @@ p {
 #myCarousel {
   width: 100%;
   position: absolute;
-  margin-top: -20px
+  margin-top: -20px;
 }
 
 // .carousel {
@@ -92,9 +92,26 @@ p {
 .carousel-text {
   height: 600px;
   padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   position: relative;
   .well {
     opacity: 0.8;
+    filter:alpha(opacity=80); /* IE 8 and lower */
+  }
+  h1, h2 {
+    color: white;
+    text-align: left;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 -1px 1px rgba(0, 0, 0, 0.8);
+    text-rendering: optimizelegibility;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 36pt;
+  }
+  h2 {
+    font-size: 20pt;
   }
 }
 
