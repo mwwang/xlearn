@@ -4,7 +4,7 @@
 <%= simple_form_for(resource, :as => resource_name, html: { multipart: true }, :url => registration_path(resource_name)) do |f| %>
   <%# devise_error_messages! %>
 
-  <%= f.input :firstname %> 
+  <%= f.input :firstname, label: "Name" %> 
   <%= f.input :lastname %>
   <%= f.input :email %>
   <%= f.input :password %>

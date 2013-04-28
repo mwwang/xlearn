@@ -96,9 +96,14 @@ p {
   margin-right: auto;
   width: 90%;
   position: relative;
-  .well {
-    opacity: 0.8;
-    filter:alpha(opacity=80); /* IE 8 and lower */
+  .well-small {
+    background-color:rgba(61,61,61,0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#993D3D3D, endColorstr=#993D3D3D);
+    /* for IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#993D3D3D, endColorstr=#993D3D3D)";
+    // opacity: 0.8;
+    // filter:alpha(opacity=80); /* IE 8 and lower */
   }
   h1, h2 {
     color: white;
@@ -113,6 +118,20 @@ p {
   h2 {
     font-size: 20pt;
   }
+}
+
+.hero-well .hero-form {
+  width: 330px;
+  font-size: 12pt;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 30px;
+}
+
+.test-select {
+  height: 35px;
+  width: 500px;
 }
 
 /* sidebar */
@@ -219,7 +238,7 @@ aside {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 3px;
   font-weight: bold;
   line-height: 1;
   &:hover {

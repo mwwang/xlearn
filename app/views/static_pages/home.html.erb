@@ -1,4 +1,4 @@
-<% provide(:title, 'Experiential Learning') %>
+<% provide(:title, 'Pass on the knowledge') %>
 
 <!-- Carousel -->
 <div id="myCarousel" class="carousel slide">
@@ -47,19 +47,22 @@
 		<h2>Start learning from <strong><%= @users.count %></strong> other people now.</h2>
 		<div class="well well-small">
 			<div class="hero-well">
-				<select>
+				<select class="hero-form">
 					<option selected disabled>What do you want to learn?</option>
 					<option>Health and pregnancy</option>
 					<option>Travel and exploration</option>
 					<option>Tech and entrepreneurship</option>
 					<option>Arts and creative</option>
+					<option>Hobbies</option>
 				</select>
-				<input type="text" placeholder="Where do you live?">
-				<button class="btn btn-large btn-primary" type="button">Find</button>
+				<input class="hero-form" type="text" placeholder="Where do you live?">
+				<button class="btn btn-large btn-primary" type="button"><i class="icon-search"></i> Search</button>
 			</div>
 		</div>
 	</aside>
 </div>
+
+<%= collection_select(:user, :id, User.all, :id, :firstname, {}, {class: 'test-select'}) %>
 
 
 
@@ -103,7 +106,6 @@
 
 <% if user_signed_in? %>
 	<%= link_to "Profile", current_user %>
-	<%= current_user.lastname %>
-	<%= current_user.firstname %>
+	<%= current_user.name %>
 <% end %>
 </div>
